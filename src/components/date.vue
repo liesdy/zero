@@ -12,6 +12,7 @@
     <br />
     <!-- timeStr: {{ timeStr }}<br /> -->
     time: {{ time }} <br />
+    时间戳: {{ time.getTime() }} <br />
     year: {{ time.getFullYear() }} <br />
     month: {{ time.getMonth() + 1 }} 美化版: {{ prettierMonth }} <br />
     注意：月份是获取的0-11,所以通过getMonth获得月份之后要+1才是正常的月份<br />
@@ -20,6 +21,8 @@
     minite: {{ time.getMinutes() }} 美化版: {{ prettierMinutes }} <br />
     seconds: {{ time.getSeconds() }} 美化版: {{ prettierSeconds }} <br />
     重新整合成字符串：{{ newDateStr }}
+    <br />
+    <router-view />
   </div>
 </template>
 

@@ -14,12 +14,35 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: "date",
-          component: () => import("./components/date.vue")
-        },
-        {
           path: "",
           component: () => import("./components/index.vue")
+        },
+        {
+          path: "date",
+          component: () => import("./components/date.vue"),
+          children: [
+            {
+              path: "example",
+              component: () => import("./views/examplePart.vue")
+            }
+          ]
+        },
+        {
+          path: "componentTest",
+          component: () =>
+            import("./components/componentTest/componentTest.vue")
+        },
+        {
+          path: "slot",
+          component: () => import("./components/slot/slotTest.vue")
+        },
+        {
+          path: "edge",
+          component: () => import("./components/edge/edgeTest.vue")
+        },
+        {
+          path: "next",
+          component: () => import("./components/next/next.vue")
         }
       ]
     },
@@ -27,7 +50,7 @@ export default new Router({
       path: "/example",
       name: "example",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./components/examplePart.vue")
+        import(/* webpackChunkName: "about" */ "./views/examplePart.vue")
     },
     {
       path: "/about",
@@ -39,13 +62,13 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/test1",
-      name: "test1",
+      path: "/blotter",
+      name: "blotter",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/test1.vue")
+        import(/* webpackChunkName: "about" */ "./views/blotter.vue")
     }
   ]
 });

@@ -7,7 +7,11 @@
     <h3>Other tests</h3>
     <el-row>
       <el-col>
-        <router-link to="date">date</router-link>
+        <router-link to="date">date</router-link>&nbsp;
+        <router-link to="componentTest">componentTest</router-link>&nbsp;
+        <router-link to="slot">slot</router-link>&nbsp;
+        <router-link to="edge">edge</router-link>&nbsp;
+        <router-link to="next">next</router-link>
       </el-col>
     </el-row>
   </div>
@@ -15,8 +19,6 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue"
-
 export default {
   name: "examplePart",
   data() {
@@ -42,5 +44,8 @@ export default {
   height: 500px;
   border: 1px dashed #ccc;
   border-radius: 5px;
+  padding: 30px;
+  text-align: left;
+  overflow: auto;
 }
 </style>

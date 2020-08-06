@@ -17,5 +17,8 @@ export default {
 <style scoped lang="scss">
 img {
   margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
