@@ -1,13 +1,15 @@
 <template>
   <div class="next">
     <h3>next</h3>
-    <child></child>
+    <!-- <child></child> -->
+    <child2></child2>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 import child from "./child.vue";
+import child2 from "./child2.vue";
 export default {
   name: "HelloWorld",
   // props: {
@@ -20,7 +22,8 @@ export default {
   computed: {
   },
   components: {
-    child
+    child,
+    child2
   }
 };
 </script>
