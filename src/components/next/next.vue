@@ -2,7 +2,10 @@
   <div class="next">
     <h3>next</h3>
     <!-- <child></child> -->
-    <child2></child2>
+    <!-- <child2></child2> -->
+    <router-view />
+    <router-link to="next1">next1</router-link>
+    <router-link to="next2">next2</router-link>
   </div>
 </template>
 

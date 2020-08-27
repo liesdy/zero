@@ -19,13 +19,7 @@ export default new Router({
         },
         {
           path: "date",
-          component: () => import("./components/date.vue"),
-          children: [
-            {
-              path: "example",
-              component: () => import("./views/examplePart.vue")
-            }
-          ]
+          component: () => import("./components/date.vue")
         },
         {
           path: "componentTest",
@@ -42,7 +36,19 @@ export default new Router({
         },
         {
           path: "next",
-          component: () => import("./components/next/next.vue")
+          component: () => import("./components/next/next.vue"),
+          children: [
+            {
+              name: "next1",
+              path: "next1",
+              component: () => import("./components/next/child.vue")
+            },
+            {
+              name: "next2",
+              path: "next2",
+              component: () => import("./components/next/child2.vue")
+            }
+          ]
         }
       ]
     },

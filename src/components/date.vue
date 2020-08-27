@@ -21,8 +21,6 @@
     minite: {{ time.getMinutes() }} 美化版: {{ prettierMinutes }} <br />
     seconds: {{ time.getSeconds() }} 美化版: {{ prettierSeconds }} <br />
     重新整合成字符串：{{ newDateStr }}
-    <br />
-    <router-view />
   </div>
 </template>
 
