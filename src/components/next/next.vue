@@ -1,18 +1,24 @@
 <template>
   <div class="next">
     <h3>next</h3>
-    <!-- <child></child> -->
-    <!-- <child2></child2> -->
+    <router-link to="/next/next1">next1</router-link>
+    &nbsp;
+    <router-link to="/next/compareTest">compareTest</router-link>
+    &nbsp;
+    <router-link to="/next/generatorTest1">generatorTest1常规</router-link>
+    &nbsp;
+    <router-link to="/next/generatorTest2">generatorTest2同步流程</router-link>
+    &nbsp;
+    <router-link to="/next/thunkify">thunkify测试</router-link>
+    <br />
+    <br />
     <router-view />
-    <router-link to="next1">next1</router-link>
-    <router-link to="next2">next2</router-link>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 import child from "./child.vue";
-import child2 from "./child2.vue";
 export default {
   name: "HelloWorld",
   // props: {
@@ -25,8 +31,7 @@ export default {
   computed: {
   },
   components: {
-    child,
-    child2
+    child
   }
 };
 </script>

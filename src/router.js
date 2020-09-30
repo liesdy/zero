@@ -44,9 +44,24 @@ export default new Router({
               component: () => import("./components/next/child.vue")
             },
             {
-              name: "next2",
-              path: "next2",
-              component: () => import("./components/next/child2.vue")
+              name: "compareTest",
+              path: "compareTest",
+              component: () => import("./components/next/compareTest.vue")
+            },
+            {
+              name: "generatorTest1",
+              path: "generatorTest1",
+              component: () => import("./components/next/generatorTest1.vue")
+            },
+            {
+              name: "generatorTest2",
+              path: "generatorTest2",
+              component: () => import("./components/next/generatorTest2.vue")
+            },
+            {
+              name: "thunkify",
+              path: "thunkify",
+              component: () => import("./components/next/thunkify.vue")
             }
           ]
         }
